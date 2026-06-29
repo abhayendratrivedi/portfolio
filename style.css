@@ -395,3 +395,51 @@ html {
         padding: 30px 24px;
     }
 }
+/* ---- SCROLL ANIMATIONS ---- */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* ---- HAMBURGER MENU ---- */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 2px;
+    background: #00ff88;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #080808;
+        flex-direction: column;
+        padding: 24px;
+        gap: 24px;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    nav ul.open {
+        display: flex;
+    }
+}
