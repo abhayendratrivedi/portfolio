@@ -51,6 +51,21 @@ nav ul a:hover {
     color: #00ff88;
 }
 
+/* ---- HAMBURGER ---- */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 2px;
+    background: #00ff88;
+    transition: all 0.3s ease;
+}
+
 /* ---- HERO ---- */
 .hero {
     min-height: 100vh;
@@ -168,6 +183,11 @@ nav ul a:hover {
     color: #00ff88;
 }
 
+.social-links i {
+    font-size: 18px;
+    margin-right: 6px;
+}
+
 /* ---- HERO IMAGE ---- */
 .hero-image {
     position: relative;
@@ -199,10 +219,10 @@ nav ul a:hover {
     z-index: 1;
 }
 
-
 /* ---- SECTIONS ---- */
 .about,
 .services,
+.projects,
 .contact {
     padding: 120px 60px;
     border-top: 1px solid rgba(255,255,255,0.05);
@@ -220,6 +240,7 @@ nav ul a:hover {
 
 .about h2,
 .services h2,
+.projects h2,
 .contact h2 {
     font-size: 48px;
     font-weight: 700;
@@ -287,6 +308,46 @@ nav ul a:hover {
     background: rgba(0, 255, 136, 0.05);
 }
 
+/* ---- PROJECTS ---- */
+.project-card {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 16px;
+    padding: 36px;
+    max-width: 500px;
+    margin-top: 40px;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    border-color: rgba(0, 255, 136, 0.3);
+    transform: translateY(-8px);
+}
+
+.project-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    font-size: 15px;
+    color: #999999;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.project-card a {
+    color: #00ff88;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
 /* ---- CONTACT ---- */
 .contact-links {
     display: flex;
@@ -328,18 +389,33 @@ footer {
 html {
     scroll-behavior: smooth;
 }
-.social-links i {
-    font-size: 20px;
-    margin-right: 6px;
-}/* ---- MOBILE RESPONSIVE ---- */
+
+/* ---- MOBILE RESPONSIVE ---- */
 @media (max-width: 768px) {
 
     nav {
         padding: 16px 24px;
     }
 
+    .hamburger {
+        display: flex;
+    }
+
     nav ul {
-        gap: 16px;
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #080808;
+        flex-direction: column;
+        padding: 24px;
+        gap: 24px;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    nav ul.open {
+        display: flex;
     }
 
     .hero {
@@ -377,12 +453,14 @@ html {
 
     .about,
     .services,
+    .projects,
     .contact {
         padding: 60px 24px;
     }
 
     .about h2,
     .services h2,
+    .projects h2,
     .contact h2 {
         font-size: 32px;
     }
@@ -394,96 +472,4 @@ html {
     footer {
         padding: 30px 24px;
     }
-}
-/* ---- SCROLL ANIMATIONS ---- */
-.reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.8s ease;
-}
-
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-/* ---- HAMBURGER MENU ---- */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-}
-
-.hamburger span {
-    width: 25px;
-    height: 2px;
-    background: #00ff88;
-    transition: all 0.3s ease;
-}
-
-@media (max-width: 768px) {
-    .hamburger {
-        display: flex;
-    }
-
-    nav ul {
-        display: none;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background: #080808;
-        flex-direction: column;
-        padding: 24px;
-        gap: 24px;
-        border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
-
-    nav ul.open {
-        display: flex;
-    }
-}
-/* ---- PROJECTS ---- */
-.projects {
-    padding: 100px 60px;
-    border-top: 1px solid rgba(255,255,255,0.05);
-}
-
-.project-card {
-    background: rgba(255,255,255,0.02);
-    border: 1px solid rgba(255,255,255,0.07);
-    border-radius: 16px;
-    padding: 36px;
-    max-width: 500px;
-    margin-top: 40px;
-    transition: all 0.3s ease;
-}
-
-.project-card:hover {
-    border-color: rgba(0, 255, 136, 0.3);
-    transform: translateY(-8px);
-}
-
-.project-card h3 {
-    font-size: 22px;
-    font-weight: 700;
-    margin-bottom: 12px;
-}
-
-.project-card p {
-    font-size: 15px;
-    color: #999999;
-    line-height: 1.7;
-    margin-bottom: 20px;
-}
-
-.project-card a {
-    color: #00ff88;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 15px;
-}
-
-.project-card a:hover {
-    text-decoration: underline;
 }
