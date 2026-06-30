@@ -443,3 +443,47 @@ html {
         display: flex;
     }
 }
+/* ---- PROJECTS ---- */
+.projects {
+    padding: 100px 60px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.project-card {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 16px;
+    padding: 36px;
+    max-width: 500px;
+    margin-top: 40px;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    border-color: rgba(0, 255, 136, 0.3);
+    transform: translateY(-8px);
+}
+
+.project-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    font-size: 15px;
+    color: #999999;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.project-card a {
+    color: #00ff88;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
