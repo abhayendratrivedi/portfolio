@@ -3,119 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhay Trivedi - Web Developer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Spice Garden - Authentic Indian Restaurant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
     <!-- NAV -->
     <nav>
-        <span class="logo">AbhayTrivedi.dev</span>
+        <span class="logo">Spice Garden</span>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <ul>
             <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="hamburger" onclick="toggleMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
-</div>
     </nav>
 
     <!-- HERO -->
     <section class="hero">
-
-        <div class="glow-blob"></div>
-
-          <div class="hero-text">
-            <p class="tag">👋 Available for freelance work</p>
-            <h1>I build websites<br>for <span class="highlight">businesses</span></h1>
-            <p class="sub">Fast. Clean. Affordable. Based in India.<br>Working with clients worldwide.</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn-primary">Hire Me</a>
-                <a href="#services" class="btn-secondary">See My Work</a>
-            </div>
-                <div class="social-links">
-                  <a href="https://instagram.com/yeaxh_abhay" target="_blank">
-                     <i class="fab fa-instagram"></i> Instagram
-                  </a>
-                  <a href="https://linkedin.com/in/YourName" target="_blank">
-                     <i class="fab fa-linkedin"></i> LinkedIn
-                  </a>
-                  <a href="https://github.com/abhayendratrivedi" target="_blank">
-                     <i class="fab fa-github"></i> GitHub
-                  </a>
-                </div>
-         </div>
-
-        <div class="hero-image">
-            <div class="img-glow"></div>
-           <img src="images/profile.jpg" 
-           alt="Abhay Trivedi" 
-           class="profile-img">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="tag">Welcome to</p>
+            <h1>Spice Garden</h1>
+            <p class="sub">Authentic Indian Flavors, Crafted with Love</p>
+            <a href="#menu" class="btn-primary">View Menu</a>
         </div>
-
     </section>
 
     <!-- ABOUT -->
     <section id="about" class="about reveal">
-        <div class="section-tag">About Me</div>
-        <h2>A developer who<br><span class="highlight">gets things done</span></h2>
-        <p>I am a Computer Science student from India teaching myself web development. I build clean, modern, and fast websites for local businesses, startups, and entrepreneurs who want an online presence that actually works.</p>
+        <div class="section-tag">Our Story</div>
+        <h2>A Taste of <span class="highlight">Tradition</span></h2>
+        <p>Spice Garden brings authentic Indian recipes passed down through generations. Every dish is prepared with fresh ingredients, traditional spices, and genuine love for good food. Step in and experience flavors that feel like home.</p>
     </section>
 
-    <!-- SERVICES -->
-    <section id="services" class="services reveal">
-        <div class="section-tag">What I Offer</div>
-        <h2>Services that <span class="highlight">drive results</span></h2>
-        <div class="cards">
-            <div class="card">
-                <div class="card-icon">⚡</div>
-                <h3>Landing Pages</h3>
-                <p>Clean single page websites that convert visitors into customers. Fast loading and mobile ready.</p>
-                <span class="card-tag">Most Popular</span>
+    <!-- MENU -->
+    <section id="menu" class="menu reveal">
+        <div class="section-tag">Our Menu</div>
+        <h2>Signature <span class="highlight">Dishes</span></h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <h3>Butter Chicken</h3>
+                <p>Creamy tomato gravy with tender chicken pieces</p>
+                <span class="price">₹280</span>
             </div>
-            <div class="card">
-                <div class="card-icon">🏢</div>
-                <h3>Business Websites</h3>
-                <p>Professional websites for shops, restaurants, clinics, and local businesses.</p>
-                <span class="card-tag">High Demand</span>
+            <div class="menu-item">
+                <h3>Paneer Tikka</h3>
+                <p>Grilled cottage cheese marinated in spices</p>
+                <span class="price">₹220</span>
             </div>
-            <div class="card">
-                <div class="card-icon">🎨</div>
-                <h3>Portfolio Sites</h3>
-                <p>Personal portfolio websites for freelancers, designers, and professionals.</p>
-                <span class="card-tag">Premium</span>
+            <div class="menu-item">
+                <h3>Dal Makhani</h3>
+                <p>Slow cooked black lentils with butter and cream</p>
+                <span class="price">₹180</span>
+            </div>
+            <div class="menu-item">
+                <h3>Biryani</h3>
+                <p>Fragrant basmati rice layered with spiced meat</p>
+                <span class="price">₹250</span>
+            </div>
+            <div class="menu-item">
+                <h3>Tandoori Roti</h3>
+                <p>Fresh baked bread from our traditional clay oven</p>
+                <span class="price">₹30</span>
+            </div>
+            <div class="menu-item">
+                <h3>Gulab Jamun</h3>
+                <p>Soft milk dumplings soaked in rose flavored syrup</p>
+                <span class="price">₹80</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="testimonials reveal">
+        <div class="section-tag">Reviews</div>
+        <h2>What Our <span class="highlight">Guests Say</span></h2>
+        <div class="testimonial-grid">
+            <div class="testimonial">
+                <p>"Best butter chicken in town. The flavors remind me of my grandmother's cooking."</p>
+                <span class="author">- Rahul Sharma</span>
+            </div>
+            <div class="testimonial">
+                <p>"Amazing ambiance and even better food. My family's favorite weekend spot."</p>
+                <span class="author">- Priya Singh</span>
+            </div>
+            <div class="testimonial">
+                <p>"Authentic taste, generous portions, and friendly staff. Highly recommend."</p>
+                <span class="author">- Amit Verma</span>
             </div>
         </div>
     </section>
 
     <!-- CONTACT -->
     <section id="contact" class="contact reveal">
-        <div class="section-tag">Contact</div>
-        <h2>Let's build something <span class="highlight">together</span></h2>
-        <p>Have a project in mind? Let's talk.</p>
-        <div class="contact-links">
-            <a href="mailto:abhaytrivedi8318@gmail.com" class="contact-item">
-                <span class="contact-icon">📧</span>
-                <span>abhaytrivedi8318@gmail.com</span>
-            </a>
-            <a href="https://instagram.com/yeaxh_abhay" target="_blank" class="contact-item">
-                <span class="contact-icon">📸</span>
-                <span>@yeaxh_abhay</span>
-            </a>
+        <div class="section-tag">Visit Us</div>
+        <h2>Find <span class="highlight">Spice Garden</span></h2>
+        <div class="contact-info">
+            <p>📍 Main Market Road, Lalganj Baiswara, Raebareli</p>
+            <p>📞 +91 11111 00000</p>
+            <p>🕒 11:00 AM - 11:00 PM, All Days</p>
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer>
-        <p>Designed & Built by <span class="highlight">AbhayTrivedi</span> · 2026</p>
+        <p>Designed & Built by <span class="highlight">Abhay Trivedi</span> · 2026</p>
     </footer>
 
     <script src="script.js"></script>
-
 </body>
 </html>
